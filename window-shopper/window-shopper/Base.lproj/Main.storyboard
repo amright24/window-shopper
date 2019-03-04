@@ -28,25 +28,47 @@
                                     <constraint firstAttribute="width" constant="80" id="qZq-ac-KoU"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Fs-tJ-hYa" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
-                                <rect key="frame" x="80" y="260" width="255" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Fs-tJ-hYa" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="40" y="260" width="334" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8Ok-it-O0R"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MbY-Yj-Aax" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="40" y="335" width="334" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Y0U-Yr-uNB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="MbY-Yj-Aax" firstAttribute="top" secondItem="3Fs-tJ-hYa" secondAttribute="bottom" constant="25" id="4YN-00-qoG"/>
+                            <constraint firstItem="MbY-Yj-Aax" firstAttribute="leading" secondItem="3Fs-tJ-hYa" secondAttribute="leading" id="E7e-QY-FaQ"/>
+                            <constraint firstItem="3Fs-tJ-hYa" firstAttribute="top" secondItem="vXU-F5-sgu" secondAttribute="bottom" constant="56" id="EPy-lh-r1N"/>
                             <constraint firstItem="vXU-F5-sgu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HCB-Qz-Lzc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Fs-tJ-hYa" secondAttribute="trailing" constant="40" id="See-67-r7f"/>
                             <constraint firstItem="vXU-F5-sgu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="ejd-0Z-JCf"/>
                             <constraint firstAttribute="bottom" secondItem="dEs-7Z-54u" secondAttribute="bottom" id="gkM-X4-Ijc"/>
+                            <constraint firstItem="MbY-Yj-Aax" firstAttribute="trailing" secondItem="3Fs-tJ-hYa" secondAttribute="trailing" id="iTO-u3-BoY"/>
                             <constraint firstItem="dEs-7Z-54u" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jaB-q6-3TZ"/>
                             <constraint firstItem="dEs-7Z-54u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="meg-hr-Aip"/>
+                            <constraint firstItem="MbY-Yj-Aax" firstAttribute="height" secondItem="3Fs-tJ-hYa" secondAttribute="height" id="xgX-fS-VrL"/>
+                            <constraint firstItem="3Fs-tJ-hYa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="yM0-JJ-M1o"/>
                             <constraint firstItem="dEs-7Z-54u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zz5-4S-fhX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="MbY-Yj-Aax" id="9hY-N8-buA"/>
+                        <outlet property="wageTxt" destination="3Fs-tJ-hYa" id="iE9-BI-NiN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
